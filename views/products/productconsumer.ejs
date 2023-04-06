@@ -16,10 +16,6 @@
 
                       <h5 class="card-title">Rs : <%= product.price %> </h5>
 
-                      <a href="/products/<%=product._id %>" class="btn btn-primary"> Show </a>
-
-                      <a href="/products/<%=product._id %>/edit" class="btn btn-primary"> Update </a>
-
                       <button type="button" class="btn btn-primary my-2">Buy Now</button>
 
                       <form method="post"  action="/products/<%=product._id %>?_method=DELETE">

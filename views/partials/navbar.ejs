@@ -1,3 +1,7 @@
+<link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 <nav class="navbar navbar-expand-lg navbar-dark mb-3" style="background-color:#0077b6;color:white;font-size:22px; padding:10px">
   <div class="container">
     <a class="navbar-brand" href="/">Shopping Cart</a>
@@ -16,19 +20,28 @@
       </ul>
       <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
         <% if(currentUser){ %>
+          
           <li class="nav-item">
             <a class="nav-link text-capitalize" href="#">Hi, <%=currentUser.username%>! </a>
           </li>
+          <a href="../products/productconsumer.ejs" class="icon" style="color: #e7e6e6; margin-top: 5%;">
+            <i class="bx bx-cart"></i>
+          </a>
           <li style="background-color:#0000007e;box-sizing:border-box;  border-radius: 5px;margin-left:30px" class="nav-item">
             <a style="color:#e7e6e6;font-size:18px"  class="nav-link" href="/logout">Logout</a>
           </li>
         <% }else{ %> 
+          <a href="../products/productconsumer.ejs" class="icon" style="color: #e7e6e6; margin-top: 5%; margin-right: 10%;">
+            <i class="bx bx-cart"></i>
+          </a>
             <li style="background-color:#0000007e;box-sizing:border-box;  border-radius: 5px;margin-right:30px" class="nav-item">
               <a style="color:#e7e6e6;font-size:18px" class="nav-link" href="/login">Login</a>
             </li>
             <li style="background-color:#0000007e;box-sizing:border-box;  border-radius: 5px;" class="nav-item">
               <a style="color:#e7e6e6;font-size:18px" class="nav-link" href="/register">SignUp</a>
             </li>
+            
+
           <% } %> 
 
       </ul>
